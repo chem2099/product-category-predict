@@ -176,8 +176,7 @@ Finish to start application !
 
 > http://localhost:8082/api/categories
 
-```json
-
+```
 [
     {
         "thirdCateId": 0, //三级类目ID
@@ -208,7 +207,7 @@ Finish to start application !
 
 > http://localhost:8082/api/categories/segment?name=荣耀手机原装华为p9p10plus/mate10/9/8/nova2s/3e荣耀9i/v10手机耳机【线控带麦】AM115标配版白色
 
-```json
+```
 荣耀 手机 原装 华为 p9p10plus mate10 nova2s 荣耀 v10 手机 耳机 线控 带麦 am115 标配 白色
 ```
 
@@ -265,7 +264,7 @@ Finish to start application !
 比如名称中包含“小米”的商品，可能是小米品牌数码相关的商品，也有可能是粮食。下面是几个商品的测试结果：
 
 | 商品名称        | 预测类目           |  
-| ------------- |-------------|
+| ---|---|
 | 小米 Max 全网通 3GB内存 64GB ROM 金色 移动联通电信4G手机 | 手机 |
 | 小米 Max 全网通 3GB内存 64GB ROM 金色 移动联通电信4G | 手机 |
 | 小米 Max 全网通 3GB内存 金色 | 手机 |
@@ -275,3 +274,10 @@ Finish to start application !
 | 黄小米 健康五谷杂粮 | 米面杂粮 |
 | 小米 健康杂粮 | 米面杂粮 |
 | 小米 健康 | 智能手环 |
+
+### 准确率优化
+#####1.其实这属于文本分类问题 
+#####2.可以使用双向lstm 进行模型训练的 缺少模型评估
+#####3.麻烦点就是标签的标注 手工标注 让lstm提取其特征 正常估计准确率是可以92%以上的 
+#####4.训练模型框架 使用pytorch
+#####5.有空更新哈
